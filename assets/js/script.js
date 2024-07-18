@@ -69,3 +69,30 @@ btn.on("click", function (e) {
 
 // copyright year
 document.getElementById("cp-year").innerHTML = new Date().getFullYear()
+
+//api function
+$(document).ready(function() {
+  // Function to fetch data from your API
+  function fetchData() {
+    $.ajax({
+      url: 'https://localhost:3000', 
+      method: 'GET',
+      success: function(data) {
+        // Update elements with fetched data
+        $('#servers-count').text(data.servers);
+        $('#commands-count').text(data.commands);
+        $('#users-count').text(data.users);
+      },
+      error: function(err) {
+        console.error('Error fetching data:', err);
+        // Optionally handle errors or show a message
+      }
+    });
+  }
+
+  // Initial fetch on page load
+  fetchData();
+
+  // Call fetchData every 5 minutes (adjust as needed)
+  setInterval(fetchData, 300000); // 300000 milliseconds = 5 minutes
+});

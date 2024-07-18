@@ -13,7 +13,12 @@ html {
 }
 
 .bg-base {
-  background-color: #1a2634 !important;
+  background-color: #6A648A !important;
+}
+
+.circle-icon {
+  border-radius: 50%; /* Makes the image round */
+  overflow: hidden; /* Ensures content does not overflow rounded corners */
 }
 
 #backtotop {
@@ -34,15 +39,15 @@ html {
 
 #backtotop:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: black;
 }
 
 #backtotop:active {
-  background-color: #555;
+  background-color: #7289da;
 }
 
 #backtotop.show {
-  opacity: 0.4;
+  opacity: 0.8;
   visibility: visible;
 }
 
@@ -56,12 +61,12 @@ html {
 
 .navbar-item:hover {
   background-color: transparent !important;
-  color: #7289da !important;
+  color: black !important;
 }
 
 .navbar-link:hover {
   background-color: transparent !important;
-  color: #7289da !important;
+  color: black !important;
 }
 
 .navbar-menu {
@@ -94,7 +99,7 @@ html {
 
 nav,
 .navbar-menu {
-  background-color: #1a2634 !important;
+  background-color: #6A648A !important;
 }
 
 .navbar-item.nav-dark,
@@ -191,8 +196,10 @@ nav.nav-w {
   }
 }
 
+
+
 .button.is-blurple {
-  background-color: #7289da;
+  background-color: #5865F2;
   border-color: transparent;
   color: #fff;
 }
